@@ -1,39 +1,5 @@
 # React Component Generator
 
-React Component Generator is a simple shell script that allows you to quickly generate new React components with default template files. It is a useful tool for React developers who want to streamline their workflow.
-
-## Installation
-
-1. Clone this repository: `git clone https://github.com/username/react-component-generator.git`
-2. Modify the template files in the `templates` directory to suit your needs.
-3. Create an alias for the `newcomponent.sh` script in your shell profile file, such as `.bashrc` or `.zshrc`. For example:
-
-```
-alias newcomponent="sh /pathtofolder/react-component-generator/script.sh"
-```
-
-Make sure to replace /pathtofolder/ with the actual path to the cloned repository on your machine. 4. Source your shell configuration file to reload the configuration:
-
-```
-source ~/.bashrc  # or ~/.zshrc, or whatever your shell configuration file is called
-```
-
-## Usage
-
-To create a new component, simply run the following command:
-
-```
-newcomponent MyComponent
-```
-
-This will create a new component named `MyComponent` with default template files for TypeScript, CSS, and an index file.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
-
-# React Component Generator
-
 This project provides a simple shell script for generating new React components with a pre-defined structure.
 
 ## Installation
