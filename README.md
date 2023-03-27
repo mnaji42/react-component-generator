@@ -11,13 +11,16 @@ git clone https://github.com/mnaji42/react-component-generator.git
 ```
 
 2. Modify the template files in the templates directory to match your needs.
+
 3. Create an alias for the newcomponent.sh script in your shell configuration file (e.g., .bashrc, .zshrc, etc.):
 
 ```
 alias newcomponent="sh /pathtofolder/react-component-generator/script.sh"
 ```
 
-Make sure to replace /pathtofolder/ with the actual path to the cloned repository on your machine. 4. Source your shell configuration file to reload the configuration:
+Make sure to replace /pathtofolder/ with the actual path to the cloned repository on your machine.
+
+4. Source your shell configuration file to reload the configuration:
 
 ```
 source ~/.bashrc  # or ~/.zshrc, or whatever your shell configuration file is called
