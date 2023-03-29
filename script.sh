@@ -1,6 +1,7 @@
 #!/bin/bash
 
 componentName="$1"
+scriptPath=$(cd $( dirname ${BASH_SOURCE[0]}) && pwd )
 
 if [ -z "$componentName" ]; then
   echo "Usage: $0 componentName"
@@ -14,15 +15,15 @@ fi
 
 mkdir "$componentName" || exit 1
 
-cp templates/Component.tsx "$componentName/$componentName.tsx" || exit 1
+cp $scriptPath/templates/Component.tsx "$componentName/$componentName.tsx" || exit 1
 sed -i.bak "s/{{componentName}}/${componentName}/g" "$componentName/$componentName.tsx" || exit 1
 rm "$componentName/$componentName.tsx.bak" || exit 1
 
-cp templates/styles.module.css "$componentName/$componentName.module.css" || exit 1
+cp $scriptPath/templates/styles.module.css "$componentName/$componentName.module.css" || exit 1
 sed -i.bak "s/{{componentName}}/${componentName}/g" "$componentName/$componentName.module.css" || exit 1
 rm "$componentName/$componentName.module.css.bak" || exit 1
 
-cp templates/index.ts "$componentName/index.ts" || exit 1
+cp $scriptPath/templates/index.ts "$componentName/index.ts" || exit 1
 sed -i.bak "s/{{componentName}}/${componentName}/g" "$componentName/index.ts" || exit 1
 rm "$componentName/index.ts.bak" || exit 1
 
