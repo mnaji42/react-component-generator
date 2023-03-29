@@ -40,6 +40,7 @@ This will create a new directory called MyComponent in the current working direc
 - MyComponent.module.css: a CSS module file containing the component's styles.
 - index.ts: an index file exporting the component.
   The MyComponent.tsx file will be populated with a default template that includes the component's name and some basic structure.
+- It will add the export statement for the new component at the end of a index.ts file.
 
 ## Customization
 

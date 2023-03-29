@@ -26,4 +26,10 @@ cp templates/index.ts "$componentName/index.ts" || exit 1
 sed -i.bak "s/{{componentName}}/${componentName}/g" "$componentName/index.ts" || exit 1
 rm "$componentName/index.ts.bak" || exit 1
 
+if [ -f "index.ts" ]; then
+    echo "export { default as $componentName } from './$componentName';" >> index.ts || exit 1
+else
+    echo "export { default as $componentName } from './$componentName';" > index.ts || exit 1
+fi
+
 echo "Component $componentName created successfully"
